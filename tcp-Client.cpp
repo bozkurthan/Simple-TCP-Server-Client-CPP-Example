@@ -40,7 +40,8 @@ int main(int argc, char *argv[])
                          (sockaddr*) &sendSockAddr, sizeof(sendSockAddr));
     if(status < 0)
     {
-        cout<<"Error connecting to socket!"<<endl; break;
+        cout<<"Error connecting to socket!"<<endl;
+        return -1;
     }
     cout << "Connected to the server!" << endl;
     int bytesRead, bytesWritten = 0;
